@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>여기가 바뀔거에요</h1>
+    <h1 id="result">______________</h1>
+
+    <input type="text" id="input">
+
+    <!-- <h1>내가 뭘 눌렀지?</h1>
+    <h2>이건가?</h2>
+    <h3>요건가?</h3>
+    <h4>저건가?</h4> -->
+
+    <!-- <h1>내가 뭘 눌렀지?</h1>
+    <button>이건가?</button>
+    <button>요건가?</button>
+    <button>저건가?</button> -->
+
+    <!-- <h1>운장이 형은 바보다</h1>
+    <button>아닐걸?</button> -->
+
+    <!-- <div class="box">박스</div> -->
+
+    <!-- <a href="https://www.naver.com">네이버로 가기</a>
+    <img src="https://picsum.photos/200/300" /> -->
+
+    <!-- <h1>운장이 형은 <i>바보</i>다</h1> -->
+</body>
+<script>
+    let result = document.querySelector('#result')
+    let input = document.querySelector('#input')
+
+    input.addEventListener('keyup', keyup)
+
+    function keyup(event) {
+        result.textContent = input.value
+    }
+    // keydown은 key가 눌렸을 때 실행, keyup은 key가 눌렀다가 떼는 순간 event 발생
+
+    /////////////////////////////////////////////
+    // function keydown(event) {
+    //     if(event.keyCode === 17){
+    //         result.innerHTML = "Control을 누르셨군요!"
+    //     }
+    //     else if(event.keyCode === 16){
+    //         result.innerHTML = "Shift를 누르셨군요!"
+    //     }
+    //     else if(event.keyCode === 18){
+    //         result.innerHTML = "Option을 누르셨군요!"
+    //     }
+    //     else if(event.keyCode === 13){
+    //         result.innerHTML = "Enter를 누르셨군요!"
+    //     }
+    //     else {
+    //         result.innerHTML = "이상한 걸 누르셨군요!"
+    //     }
+    // }
+    /////////////////////////////////////////////
+    // let h = []
+    // for (let i=1; i<5; i++)
+    //     h.push(document.querySelector('h'+i))
+
+    // getelementsBy는 배열이 아니라 node order라고 해서 유사배열임 -> forEach가 안 먹힘
+    /////////////////////////////////////////////
+    // h = [document.querySelector('h1'), document.querySelector('h2'), document.querySelector('h3'),document.querySelector('h4')]
+    /////////////////////////////////////////////
+    // h.forEach(function(button) {
+    //     button.addEventListener("click", function(){
+    //         button.innerHTML = "찾았다!";
+    //     });
+    // });
+    /////////////////////////////////////////////
+    // let h1 = document.querySelector('h1')
+    // let button = document.getElementsByTagName('button')
+    // let buttons = document.querySelectorAll('button')
+
+    // buttons.forEach(function(button) {
+    //     button.addEventListener("click", function(){
+    //         button.innerHTML = "찾았다!";
+    //     });
+    // });
+    /////////////////////////////////////////////
+    // button[0].addEventListener("click", function(){
+    //     button[0].innerHTML = '찾았다!'
+    // })
+    // button[1].addEventListener("click", function(){
+    //     button[1].innerHTML = '찾았다!'
+    // })
+    // button[2].addEventListener("click", function(){
+    //     button[2].innerHTML = '찾았다!'
+    // })
+    /////////////////////////////////////////////
+    // let h1 = document.querySelector('h1')
+    // let button = document.querySelector('button')
+
+    // // button 클릭시 텍스트 바꾸기
+    // button.addEventListener("click", function(){
+    //     h1.innerHTML = "운장이는 <i>몽총이</i>디"
+    //     button.innerHTML = '그거지!'
+    // })
+    /////////////////////////////////////////////
+    // let box = document.querySelector('.box')
+
+    // // 마우스를 올렸을 때
+    // box.addEventListener('mouseover', function(){
+    //     console.log("마우스가 올라갔다!");
+    //     box.style.backgroundColor = 'blue'
+    // })
+    // // 마우스가 나갔을 때,
+    // box.addEventListener('mouseout', function(){
+    //     console.log("마우스가 나갔다!");
+    //     box.style.backgroundColor = 'yellow'
+    // })
+    /////////////////////////////////////////////
+    // let link = document.querySelector('a')
+    // let image = document.querySelector('img')
+
+    // link.setAttribute('href','https://www.google.com')
+    // link.textContent = '구글로 가기'
+    // image.setAttribute('src', "https://picsum.photos/500/300")
+
+    // console.log(link.getAttribute('href'))
+    // console.log(image.getAttribute('src'))
+
+    // let h1 = document.querySelector('h1')
+
+    // h1.innerHTML = '운장<i>바보</i>다'
+    // h1.textContent = '운장이는 몽총이다'
+
+    // 안에 뭐가 있는지 확인
+    // console.log(h1.innerHTML)
+    // console.log(h1.textContent)
+
+    // title이라는 변수에 h1태그 할당
+    // let title = document.querySelector('#title')
+    // "title_style"라는 클래스를 yap에 추가하기
+    // title.classList.add("title_style");
+    // title.classList.remove("title_style");
+    // title.classList.toggle("title_style");
+</script>
+</html>
